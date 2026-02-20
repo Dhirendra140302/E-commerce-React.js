@@ -1,0 +1,751 @@
+/* ---------------------Login Page-------------------- */
+/* Reset */
+.loginbody *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Background */
+.loginbody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 10px;
+    /* background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); */
+    position: relative;
+}
+
+.loginbody::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("https://images.pexels.com/photos/31788680/pexels-photo-31788680.jpeg");
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Glass Card */
+.wrapper{
+    width: 400px;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.37);
+    transition: 0.3s ease;
+}
+
+.wrapper:hover{
+    box-shadow: 0 12px 48px rgba(0,0,0,0.5);
+}
+
+/* Form Layout */
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title */
+.login-title{
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Input Wrapper */
+.input-field{
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    margin: 20px 0;
+}
+
+/* Input */
+.login-input{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    padding: 0 10px;
+}
+
+/* Placeholder Styling */
+.login-input::placeholder{
+    color: rgba(255,255,255,0.8);
+}
+
+/* Remember + Forget */
+.forget{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 35px;
+    color: white;
+}
+
+.remember-label{
+    display: flex;
+    align-items: center;
+}
+
+.remember-checkbox{
+    accent-color: #ffdde1;
+}
+
+.remember-text{
+    margin-left: 8px;
+}
+
+/* Links */
+.forget-link,
+.register-link{
+    color: black;
+    text-decoration: none;
+}
+
+/* Button */
+.login-btn{
+    background-color: #271930;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover{
+    color: black;
+    background: rgba(225,225,225,0.2);
+    border-color: white;
+}
+
+/* Register */
+.register{
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
+
+/* ------------------Registration Page--------------- */
+.register-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 15px;
+    /* background: linear-gradient(135deg, #ff9a9e, #fad0c4); */
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+}
+
+.register-body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("https://images.pexels.com/photos/31788680/pexels-photo-31788680.jpeg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* Card */
+.register-wrapper {
+    width: 450px;
+    padding: 40px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.37);
+}
+
+/* Title */
+.register-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Input */
+.register-input-field {
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    margin: 18px 0;
+}
+
+.register-input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+}
+
+.register-input::placeholder {
+    color: rgba(255,255,255,0.8);
+}
+
+/* Gender */
+.register-gender {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    color: white;
+}
+
+.gender-label {
+    margin-right: 10px;
+}
+
+/* Terms */
+.register-terms {
+    margin: 20px 0;
+    color: white;
+}
+
+/* Button */
+.register-btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+    background: #271930;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background: rgba(225,225,225,0.2);
+    border: 1px solid white;
+    color: black;
+}
+
+/* Login link */
+.register-login {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.register-login-link {
+    color: darkslategrey;
+    text-decoration: none;
+}
+
+.error-msg {
+  color: #ff4d4d;
+  font-size: 13px;
+  margin-top: 4px;
+  display: block;
+}
+
+
+/* ---------------------Product details-------------------------- */
+.product-details-container {
+  min-height: 100vh;
+  background: #f4f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.product-details-card {
+  background: #fff;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.product-details-card:hover {
+  transform: translateY(-4px);
+}
+
+.image-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image {
+  max-width: 260px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.08);
+}
+
+.stock-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.stock-badge.in {
+  background: #2ecc71;
+}
+
+.stock-badge.out {
+  background: #e74c3c;
+}
+
+.product-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.stars {
+  font-weight: 600;
+  color: #f39c12;
+}
+
+.reviews {
+  color: #666;
+}
+
+.product-desc {
+  color: #555;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.product-category {
+  font-size: 14px;
+  color: #444;
+}
+
+.product-category span {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.product-price {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.product-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  background: #3498db;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #217dbb;
+  transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #eee;
+}
+
+
+/* --------------------Shimmer Effect-------------- */
+/* Full width background */
+.shimmer-section {
+  width: 100%;
+  padding: 30px 0;
+  position: relative;
+}
+
+/* Search shimmer positioning */
+.shimmer-search-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: clamp(24px, 6vw, 120px);
+  margin-bottom: 20px;
+}
+
+/* Search bar shimmer */
+.shimmer-search {
+  width: 420px;   /* was 30vw */
+  min-width: 220px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Centered card layout */
+.shimmer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-left: clamp(24px, 6vw, 120px);
+  padding-right: clamp(24px, 6vw, 120px);
+
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.shimmer-card {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shared shimmer animation */
+.shimmer-card::after,
+.shimmer-search::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150px;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -150px; }
+  100% { left: 100%; }
+}
+
+
+
+/* ------------------Error Page------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.error-container {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  color: #ff4c60;
+}
+
+.error-title {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.error-text {
+  font-size: 1rem;
+  opacity: 0.85;
+  max-width: 400px;
+  margin-bottom: 25px;
+}
+
+.error-btn {
+  text-decoration: none;
+  padding: 12px 28px;
+  background-color: #ff4c60;
+  color: white;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.error-btn:hover {
+  background-color: #ff2f4a;
+  transform: translateY(-2px);
+}
+
+
+/* ================= GLOBAL ================= */
+body {
+  background: #f5f7fb;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background: white !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.navbar img {
+  transition: 0.3s;
+}
+.navbar img:hover {
+  transform: scale(1.1);
+}
+
+.navbar .bi {
+  transition: 0.25s;
+}
+.navbar .bi:hover {
+  color: #ff4d4d !important;
+  transform: scale(1.2);
+}
+
+/* ================= SEARCH BAR ================= */
+.bg-secondary {
+  background: transparent !important;
+}
+
+form .form-control {
+  border-radius: 25px;
+  padding: 10px 16px;
+}
+
+form .btn {
+  border-radius: 25px;
+}
+
+/* ================= PRODUCT CARDS ================= */
+.card {
+  border: none !important;
+  border-radius: 18px !important;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.15);
+}
+
+.card img {
+  height: 200px;
+  object-fit: contain;
+  padding: 20px;
+}
+
+/* product title */
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  height: 40px;
+}
+
+/* price */
+.card h5 {
+  color: #2ecc71 !important;
+  font-weight: bold;
+}
+
+/* heart icon */
+.bi-heart,
+.bi-heart-fill {
+  cursor: pointer;
+  transition: 0.25s;
+}
+.bi-heart:hover {
+  color: red !important;
+  transform: scale(1.2);
+}
+
+/* button */
+.card button {
+  border-radius: 25px !important;
+}
+
+/* ================= PRODUCT DETAILS PAGE ================= */
+
+.product-details-container {
+  background: linear-gradient(120deg,#fdfbfb,#ebedee);
+}
+
+.product-details-card {
+  border-radius: 20px;
+}
+
+.product-image {
+  max-width: 320px;
+}
+
+.product-title {
+  font-size: 24px;
+}
+
+.product-price {
+  color: #27ae60 !important;
+  font-size: 30px;
+}
+
+/* ================= CART PAGE ================= */
+.container .card {
+  border-radius: 14px !important;
+}
+
+.container .card img {
+  padding: 10px;
+}
+
+.container .btn-danger {
+  border-radius: 25px;
+}
+
+.container .btn-success {
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+/* ================= LOGIN PAGE ================= */
+.wrapper {
+  backdrop-filter: blur(25px);
+}
+
+/* ================= WISHLIST ================= */
+.wishlist-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.wishlist-empty img {
+  opacity: 0.7;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #0f172a !important;
+}
+
+footer h5, footer h6 {
+  color: #fff;
+}
+
+footer ul li {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+footer ul li:hover {
+  color: #38bdf8;
+  padding-left: 5px;
+}
+
+footer i {
+  transition: 0.25s;
+}
+
+footer i:hover {
+  color: #38bdf8;
+  transform: scale(1.2);
+}
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 10px;
+}
+
+.rating {
+  color: #f39c12;
+  font-size: 18px;
+}
+
+.star {
+  margin-right: 2px;
+}
+
+.rating-number {
+  color: #555;
+  font-size: 14px;
+}
+
+.btn-outline-secondary {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 50%;
+  font-weight: bold;
+}

@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "id": "8018",
+      "name": "Dhirendra Yadav",
+      "email": "dhirendra140302@gmail.com",
+      "phone": "6386215485",
+      "gender": "Male",
+      "dob": "2026-02-11",
+      "password": "ram123",
+      "confirmPassword": "ram123",
+      "terms": true
+    }
+  ]
+}
